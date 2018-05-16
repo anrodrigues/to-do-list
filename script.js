@@ -1,12 +1,26 @@
 
-var id = 0;
 var texto = $('#texto-input');
 
 $("#add-div").click(function(){
-  id = id += 1;
-  $(".to-do").append('<p class="alert-info tarefa">' + id +' - '+ texto.val());
-  texto.val(" ") ;
+
+    $(".to-do").append(`<p class="alert-info tarefa"> ${texto.val()} <spam class="fecha"> x </spam> `);
+    texto.val(" ") ;
+
+	atarefas = Array.from($('.tarefa'));
+	
+	atarefas.forEach(function(tarefa,index){
+		tarefa.childNodes[1].addEventListener('click',function(){
+			tarefa.remove();
+		})
+	})
+	
 });
+
+	
+
+	
+	
+
 
 
 

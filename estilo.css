@@ -4,3 +4,14 @@
 .p-hover{
   font-size: 3em;
 }
+
+.fecha{
+	float:right;
+	padding-right: 10px;
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+.fecha:hover{
+	opacity: 1;
+}
